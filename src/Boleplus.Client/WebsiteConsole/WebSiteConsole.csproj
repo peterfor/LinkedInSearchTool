@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82A4DB59-4E38-4B31-ACD1-48481A1BB4FE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebSiteConsole</RootNamespace>
+    <AssemblyName>WebSiteConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>D:\重要文件\项目\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0C4819137BA3639C0F56402A385ED699081B3D6F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WebSiteConsole_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MongoDB.Bson, Version=1.7.0.4714, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BolePlus.Client.LinkedIn\Extensions\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.7.0.4714, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BolePlus.Client.LinkedIn\Extensions\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="WebSiteConsole_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Boleplus.Client.ChinaHr\BolePlus.Client.ChinaHr.csproj">
+      <Project>{525f790a-8f52-4874-b4e3-0f97dbb136d3}</Project>
+      <Name>BolePlus.Client.ChinaHr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Boleplus.Client.Common\BolePlus.Client.Common.csproj">
+      <Project>{1f76beb8-e5f9-4cb9-a08b-0057b9e80f34}</Project>
+      <Name>BolePlus.Client.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Boleplus.Client.DataLayer\BolePlus.Client.DataLayer.csproj">
+      <Project>{97db13fe-e3bb-4c2d-8eea-63894d322c48}</Project>
+      <Name>BolePlus.Client.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolePlus.Client.GoogleCache\BolePlus.Client.GoogleCache.csproj">
+      <Project>{12638c01-d333-4cbe-a05d-10f1acf011e1}</Project>
+      <Name>BolePlus.Client.GoogleCache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolePlus.Client.LinkedIn\BolePlus.Client.LinkedIn.csproj">
+      <Project>{ad1efcd0-851c-4063-bec1-019363b9f23c}</Project>
+      <Name>BolePlus.Client.LinkedIn</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolePlus.Client.PostalCode\BolePlus.Client.PostalCode.csproj">
+      <Project>{fb05bd4e-15ed-427c-945e-af902bc0bc39}</Project>
+      <Name>BolePlus.Client.PostalCode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolePlus.Client.Proxy\BolePlus.Client.Proxy.csproj">
+      <Project>{a19392a0-ecbd-4c09-8577-e27af3eb2574}</Project>
+      <Name>BolePlus.Client.Proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Boleplus.Client.Qcwy\BolePlus.Client.Qcwy.csproj">
+      <Project>{8da08317-f5fd-4ad7-8f73-90f522998c88}</Project>
+      <Name>BolePlus.Client.Qcwy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Boleplus.Client.Web\BolePlus.Client.Web.csproj">
+      <Project>{f544b6e8-83d0-47d6-b611-f2c7733bc129}</Project>
+      <Name>BolePlus.Client.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolePlus.Client.Zhaopin\BolePlus.Client.Zhaopin.csproj">
+      <Project>{43cdf8fe-7e5b-4a6e-9e97-43bd833a92a4}</Project>
+      <Name>BolePlus.Client.Zhaopin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\Copy of UsPostCode.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\ProfileIds.xml" />
+    <Content Include="config\ProfileIds2.xml" />
+    <Content Include="config\Proxy.xml" />
+    <Content Include="config\USCity.xml" />
+    <Content Include="config\UsPostCode.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="config\USStateCode.xml" />
+    <Content Include="config\ValidProxy.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
