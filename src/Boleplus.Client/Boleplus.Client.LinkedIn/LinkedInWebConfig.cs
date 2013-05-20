@@ -43,19 +43,14 @@ namespace BolePlus.Client.LinkedIn
                         DisplayName = "用户名",
                         IsRequired = true,
                         RequireEncryption = false,
-                      // Value = "peterlei@live.cn",
-                             Value = this.LoginConfiguration.UserName,
-                     //   Value="523182450@qq.com",
-                       //    Value = "murderpeter@gmail.com",
+                        Value = this.LoginConfiguration.UserName,
                     });
                     this._loginParameters.Add("Password", new LoginParameter()
                     {
                         DisplayName = "密码",
                         IsRequired = true,
                         RequireEncryption = false,
-                       //   Value = "likeni100",
                         Value = this.LoginConfiguration.Password,
-                       // Value = "likeni100",
                     });
 
                 }
