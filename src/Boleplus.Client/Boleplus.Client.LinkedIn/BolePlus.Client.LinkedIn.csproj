@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD1EFCD0-851C-4063-BEC1-019363B9F23C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BolePlus.Client.LinkedIn</RootNamespace>
+    <AssemblyName>BolePlus.Client.LinkedIn</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MongoDB.Bson, Version=1.7.0.4714, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Extensions\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=1.7.0.4714, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Extensions\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccessor\ProfileDataAccessor.cs" />
+    <Compile Include="LinkedInAnalyzer.cs" />
+    <Compile Include="LinkedInWebConfig.cs" />
+    <Compile Include="LinkedInWebSystemProvider.cs" />
+    <Compile Include="Model\CollegeProfile.cs" />
+    <Compile Include="Model\LinkedInProfile.cs" />
+    <Compile Include="Model\LinkedInSearchResult.cs" />
+    <Compile Include="Model\MongoProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Boleplus.Client.Common\BolePlus.Client.Common.csproj">
+      <Project>{1f76beb8-e5f9-4cb9-a08b-0057b9e80f34}</Project>
+      <Name>BolePlus.Client.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BolePlus.Client.Configuration\BolePlus.Client.Configuration.csproj">
+      <Project>{07bb4a1d-26ba-4ba9-9f49-499b42a6872e}</Project>
+      <Name>BolePlus.Client.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Boleplus.Client.DataLayer\BolePlus.Client.DataLayer.csproj">
+      <Project>{97db13fe-e3bb-4c2d-8eea-63894d322c48}</Project>
+      <Name>BolePlus.Client.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Boleplus.Client.Framework\BolePlus.Client.Framework.csproj">
+      <Project>{d2e308c1-79d9-423d-8660-0e8ca1fa0a81}</Project>
+      <Name>BolePlus.Client.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Boleplus.Client.Web\BolePlus.Client.Web.csproj">
+      <Project>{f544b6e8-83d0-47d6-b611-f2c7733bc129}</Project>
+      <Name>BolePlus.Client.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Extensions\MongoDB.Bson.dll" />
+    <Content Include="Extensions\MongoDB.Driver.dll" />
+    <Content Include="Schema\1.txt" />
+    <Content Include="Schema\2.txt" />
+    <Content Include="Schema\3.txt" />
+    <Content Include="Schema\4.txt" />
+    <Content Include="Schema\5.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
